@@ -27,10 +27,10 @@ sub EVENT_HP {
 }
 
 sub EVENT_ENTER {
-  if (($ulevel >= 53) && ($status < 80)) {
-    quest::echo(0, "I will not fight you, but I will banish you!");
-    $client->MovePC(30,-7024,2020,-60.7,0);
-  }
+	#  if (($ulevel >= 53) && ($status < 80)) {
+	#quest::echo(0, "I will not fight you, but I will banish you!");
+	#$client->MovePC(30,-7024,2020,-60.7,0);
+	#}
 }
 
 sub EVENT_AGGRO {
@@ -51,10 +51,10 @@ sub EVENT_TIMER {
 	    my $h_dmg = $ent->GetDamage();
 	    my $h_hate = $ent->GetHate();
         if ($h_ent->IsClient()) {
-          if ($h_ent->GetLevel() > 52) {
-            quest::ze(0,"I will not fight you, but I will banish you!");
-            $h_ent->CastToClient()->MovePC(30,-7024,2020,-60.7,0);
-          }
+		#if ($h_ent->GetLevel() > 52) {
+		#quest::ze(0,"I will not fight you, but I will banish you!");
+		#$h_ent->CastToClient()->MovePC(30,-7024,2020,-60.7,0);
+		#}
         }
 	  }
     } else {
